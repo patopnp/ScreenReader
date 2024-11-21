@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1983018D-EDCC-48F1-B6DF-FE05DC1A919B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JABProject</RootNamespace>
+    <AssemblyName>JABProject</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsAccessBridgeInterop">
+      <HintPath>lib\WindowsAccessBridgeInterop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandsMediator.cs" />
+    <Compile Include="Controller\VoiceInputHandler.cs" />
+    <Compile Include="Domain\Commands\SelectTreeNodeCommand.cs" />
+    <Compile Include="Domain\Entities\Button.cs" />
+    <Compile Include="Domain\Entities\CheckBox.cs" />
+    <Compile Include="Domain\Commands\CheckCommand.cs" />
+    <Compile Include="Domain\Entities\Menu.cs" />
+    <Compile Include="Domain\Entities\MenuBar.cs" />
+    <Compile Include="Domain\Entities\MenuItem.cs" />
+    <Compile Include="Domain\Entities\PageTabList.cs" />
+    <Compile Include="Domain\Commands\ReadCommand.cs" />
+    <Compile Include="Domain\Commands\ClickCommand.cs" />
+    <Compile Include="Domain\Entities\ComboBox.cs" />
+    <Compile Include="Domain\Commands\Command.cs" />
+    <Compile Include="Domain\Commands\EraseTextCommand.cs" />
+    <Compile Include="Domain\Entities\Table.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Commands\ReadContentCommand.cs" />
+    <Compile Include="Domain\Commands\ReadListCommand.cs" />
+    <Compile Include="Domain\Commands\SpinValueCommand.cs" />
+    <Compile Include="JavaApplication.cs" />
+    <Compile Include="Domain\Entities\Label.cs" />
+    <Compile Include="Domain\Entities\List.cs" />
+    <Compile Include="Domain\Entities\PageTab.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\Entities\RadioButton.cs" />
+    <Compile Include="Domain\Commands\SelectChildrenCommand.cs" />
+    <Compile Include="Domain\Commands\ExpandTreeNodeCommand.cs" />
+    <Compile Include="Domain\Entities\SpinBox.cs" />
+    <Compile Include="Domain\Entities\Text.cs" />
+    <Compile Include="Domain\Entities\TextField.cs" />
+    <Compile Include="Domain\Commands\TextFieldComboBox.cs" />
+    <Compile Include="Domain\Entities\Tree.cs" />
+    <Compile Include="Domain\Entities\Widget.cs" />
+    <Compile Include="Domain\WidgetFactory.cs" />
+    <Compile Include="Domain\Commands\WriteTextCommand.cs" />
+    <Compile Include="Utils\WidgetsHelper.cs" />
+    <Compile Include="WindowsInterOp.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WindowsAccessBridge-32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WindowsAccessBridge-64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WindowsAccessBridge.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

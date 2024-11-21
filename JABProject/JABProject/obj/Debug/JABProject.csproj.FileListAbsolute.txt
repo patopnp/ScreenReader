@@ -1,0 +1,15 @@
+C:\Users\pato_\source\repos\JABProject\JABProject\bin\Debug\JABProject.exe.config
+C:\Users\pato_\source\repos\JABProject\JABProject\bin\Debug\JABProject.exe
+C:\Users\pato_\source\repos\JABProject\JABProject\bin\Debug\JABProject.pdb
+C:\Users\pato_\source\repos\JABProject\JABProject\obj\Debug\JABProject.csproj.AssemblyReference.cache
+C:\Users\pato_\source\repos\JABProject\JABProject\obj\Debug\JABProject.Form1.resources
+C:\Users\pato_\source\repos\JABProject\JABProject\obj\Debug\JABProject.Properties.Resources.resources
+C:\Users\pato_\source\repos\JABProject\JABProject\obj\Debug\JABProject.csproj.GenerateResource.cache
+C:\Users\pato_\source\repos\JABProject\JABProject\obj\Debug\JABProject.csproj.CoreCompileInputs.cache
+C:\Users\pato_\source\repos\JABProject\JABProject\obj\Debug\JABProject.exe
+C:\Users\pato_\source\repos\JABProject\JABProject\obj\Debug\JABProject.pdb
+C:\Users\pato_\source\repos\JABProject\JABProject\bin\Debug\WindowsAccessBridgeInterop.dll
+C:\Users\pato_\source\repos\JABProject\JABProject\obj\Debug\JABProject.csproj.Up2Date
+C:\Users\pato_\source\repos\JABProject\JABProject\bin\Debug\WindowsAccessBridge.dll
+C:\Users\pato_\source\repos\JABProject\JABProject\bin\Debug\WindowsAccessBridge-32.dll
+C:\Users\pato_\source\repos\JABProject\JABProject\bin\Debug\WindowsAccessBridge-64.dll
