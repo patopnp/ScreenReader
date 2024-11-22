@@ -22,16 +22,16 @@ Widget factory is responsible for Widget creation of the appropriate subtype and
 While command objects are the one responsible for operations executions, it's not a command pattern implementation because the invoker (CommandMediators) and the commands (e.g ClickButtonCommand) are tightly coupled. Click button command invocation from CommandMediators always corresponds to ClickButtonCommand execution and, moreover, requests invocation parameters are supplied by commands themselves.
 Which deviates from GOF Design pattern command pattern consequences: <i>"Command decouples the object that invokes the operation from the one that knows how to perform it." </i>
 
-### Data structures
+### Data structures:
 
 Widgets implement a <b>tree</b> structure with depth first tree traversal on populateChildrenNodes and again a priority driven depth first traversal for sorting widgets.
 
 <b>Maps</b> (or dictionary) are used for mapping the voice commands to actions.
 
-### Libraries
+### Libraries:
 
 WindowInterOp makes use of WindowsAccessBridgeInterOp DLL from google access bridge explorer, which in turn makes use of Java Access Bridge technology to read into the JVM.
 
-### Thread sync
+### Thread sync:
 
 Voice recognition runs in a separate thread and syncs with the main thread which runs business logic and text to speech via AutoResetEvent.
