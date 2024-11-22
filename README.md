@@ -1,6 +1,6 @@
 # Screen reader
 
-This is a screen reader that reads a Java swing application and allows the user to interact through voice commands. It could be useful for visually impared or defective display rendering.
+This is a screen reader that reads a Java swing application and allows the user to interact through voice commands.
 
 ## Implementation details
 
