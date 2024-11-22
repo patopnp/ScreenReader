@@ -52,8 +52,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandsMediator.cs" />
-    <Compile Include="Controller\VoiceInputHandler.cs" />
+    <Compile Include="UI\Speaker.cs" />
+    <Compile Include="UI\VoiceUI.cs" />
+    <Compile Include="Domain\CommandsMediator.cs" />
+    <Compile Include="UI\VoiceInputHandler.cs" />
     <Compile Include="Domain\Commands\SelectTreeNodeCommand.cs" />
     <Compile Include="Domain\Entities\Button.cs" />
     <Compile Include="Domain\Entities\CheckBox.cs" />
@@ -68,16 +70,10 @@
     <Compile Include="Domain\Commands\Command.cs" />
     <Compile Include="Domain\Commands\EraseTextCommand.cs" />
     <Compile Include="Domain\Entities\Table.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Domain\Commands\ReadContentCommand.cs" />
     <Compile Include="Domain\Commands\ReadListCommand.cs" />
     <Compile Include="Domain\Commands\SpinValueCommand.cs" />
-    <Compile Include="JavaApplication.cs" />
+    <Compile Include="Utils\InterOp\JavaApplication.cs" />
     <Compile Include="Domain\Entities\Label.cs" />
     <Compile Include="Domain\Entities\List.cs" />
     <Compile Include="Domain\Entities\PageTab.cs" />
@@ -95,10 +91,7 @@
     <Compile Include="Domain\WidgetFactory.cs" />
     <Compile Include="Domain\Commands\WriteTextCommand.cs" />
     <Compile Include="Utils\WidgetsHelper.cs" />
-    <Compile Include="WindowsInterOp.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Utils\InterOp\WindowsInterOp.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -121,17 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="WindowsAccessBridge-32.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="WindowsAccessBridge-64.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="WindowsAccessBridge.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

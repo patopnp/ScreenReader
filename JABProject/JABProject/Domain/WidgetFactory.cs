@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using WindowsAccessBridgeInterop;
-using static JABProject.Form1;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using Domain.Entities;
+using JABProject.Utils.InterOp;
 
 public static class WidgetFactory
 {

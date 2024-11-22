@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using WindowsAccessBridgeInterop;
 using JABProject;
+using JABProject.Utils.InterOp;
 
 namespace Domain.Commands
 {

@@ -5,13 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WindowsAccessBridgeInterop;
+using JABProject.Utils.InterOp;
 
 namespace JABProject.Utils
 {
     static class WidgetsHelper
     {
-
-
         static void assignWidgetsMissingName(List<Widget> row)
         {
             string leftLabel = null;
@@ -70,7 +69,6 @@ namespace JABProject.Utils
                         row.Add(wr);
                     }
                 }
-                //sorted.Add(new WidgetReading("below", null, 0, 0, 0));
                 row = row.OrderBy(reading => reading.X).ToList();
                 assignWidgetsMissingName(row);
 
@@ -78,8 +76,6 @@ namespace JABProject.Utils
                 foreach (Widget wr in row)
                 {
                     listOfWidgets.Remove(wr);
-                    //if (sortedWidgets.Contains(wr) == false)
-                    // Puede que se repita el nombre y sea valido
                     if (sortedWidgets.Any(o => o.getTag() == wr.getTag()) == false)
                     {
 
@@ -102,7 +98,6 @@ namespace JABProject.Utils
                         {
                             forReading += "inside " + wr.getTag() + ", ";
                             forReading += sortWidgets(wr, sortedWidgets);
-                            //if (wr.Name != "Options list")
                             forReading += "outside " + wr.getTag() + ", ";
                         }
                         else
@@ -114,14 +109,12 @@ namespace JABProject.Utils
                             {
                                 forReading += wr.Children[i].getTag() + ", ";
                                 sortedWidgets.Add(wr.Children[i]);
-                                //traverseChildren(wr);
                             }
                             if (i != wr.Children.Count)
                             {
                                 forReading += "more... ";
                             }
 
-                            //if (wr.Name != "Options list")
                             forReading += "outside " + wr.getTag() + ", ";
                         }
                     }
@@ -141,9 +134,7 @@ namespace JABProject.Utils
         {
             Widget w = WidgetFactory.CreateWidget(handle, parent, cm);
             WindowsInterOp.jab.Functions.GetAccessibleContextInfo(WindowsInterOp.vmId, handle, out AccessibleContextInfo accessibleContextInfo);
-            /*
-            bool exploreInto = accessibleContextInfo.states.Contains("showing");
-            */
+
             if (accessibleContextInfo.states.Contains("showing") == false && parent.getWidgetType() != "Table") return;
 
             if (w != null)

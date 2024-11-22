@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using JABProject;
 using WindowsAccessBridgeInterop;
-using static JABProject.Form1;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using static WindowsAccessBridgeInterop.TextReaderExtensions;
 

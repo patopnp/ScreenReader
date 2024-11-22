@@ -24,13 +24,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Threading;
 using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static JABProject.Form1;
-using JABProject.Controller;
 using JABProject.Utils;
 using Domain.Entities;
 using Domain.Commands;
 
-namespace JABProject
+namespace JABProject.Utils.InterOp
 {
     static class WindowsInterOp
     {
@@ -56,7 +54,6 @@ namespace JABProject
         public static List<JavaApplication> FindJavaWindow(params string[] processNames)
         {
             List<JavaApplication> applications = new List<JavaApplication>();
-            //IntPtr foundHandle = IntPtr.Zero;
 
             EnumWindows((hWnd, lParam) =>
             {
@@ -65,25 +62,18 @@ namespace JABProject
                     GetWindowThreadProcessId(hWnd, out uint processId);
                     Process process = Process.GetProcessById((int)processId);
 
-
                     foreach (String processName in processNames)
                         if (process.ProcessName.Equals(processName, StringComparison.OrdinalIgnoreCase))
                         {
-                            // Optionally, check the window title or other criteria here.
                             StringBuilder windowTitle = new StringBuilder(256);
                             GetWindowText(hWnd, windowTitle, windowTitle.Capacity);
-
                             applications.Add(new JavaApplication(windowTitle.ToString(), hWnd));
-                            //foundHandle = hWnd;
-                            //return false; // Stop enumeration
-
                         }
                 }
-                return true; // Continue enumeration
+                return true;
             }, IntPtr.Zero);
 
             return applications;
-            // return foundHandle;
         }
 
     }
