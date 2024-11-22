@@ -17,13 +17,13 @@ Widget factory is responsible for Widget creation of the appropriate subtype and
 
 ### Others
 While command objects are the one responsible for operations executions it's not a command pattern implementation because the invoker (Form1.cs) and the commands (e.g ClickButtonCommand) are tightly coupled. Click button command invocation from Form1.cs always corresponds to ClickButtonCommand execution and, moreover, requests invocation parameters are supplied by commands themselves.
-Which violates GOF Design pattern command pattern consequences: "Command decouples the object that invokes the operation from the one that knows how to perform it." 
+Which violates GOF Design pattern command pattern consequences: <i>"Command decouples the object that invokes the operation from the one that knows how to perform it." </i>
 
 ## Data structures
 
-Widgets implement a tree structures with depth first tree traversal on populateChildrenNodes and again a priority driven depth first traversal for sorting widgets.
+Widgets implement a <b>tree</b> structure with depth first tree traversal on populateChildrenNodes and again a priority driven depth first traversal for sorting widgets.
 
-Maps (or dictionary) are used for mapping the voice commands to actions.
+<b>Maps</b> (or dictionary) are used for mapping the voice commands to actions.
 
 ## Thread sync
 
