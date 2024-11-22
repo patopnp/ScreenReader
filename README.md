@@ -1,5 +1,6 @@
 # Implementation details
 
+
 ## Design patterns
 
 ### Mediator pattern. 
@@ -21,8 +22,9 @@ Which violates GOF Design pattern command pattern consequences: "Command decoupl
 ## Data structures
 
 Widgets implement a tree structures with depth first tree traversal on populateChildrenNodes and again a priority driven depth first traversal for sorting widgets.
-Maps (or dictionary) for mapping the voice commands to actions.
 
-### Thread sync
+Maps (or dictionary) are used for mapping the voice commands to actions.
+
+## Thread sync
 
 Voice recognition runs in a separate thread and syncs with the main thread which runs business logic and text to speech via AutoResetEvent.
