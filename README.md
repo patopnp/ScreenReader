@@ -16,8 +16,8 @@ While not strictly a Factory Method pattern, since there are no subclasses of Cr
 Widget factory is responsible for Widget creation of the appropriate subtype and it may be thought as an utility class. 
 
 ### Others
-While command objects are the one responsible for operations executions it's not a command pattern implementation because the invoker (Form1.cs) and the commands (e.g ClickButtonCommand) are tightly coupled. Click button command invocation from Form1.cs always corresponds to ClickButtonCommand execution and, moreover, requests invocation parameters are supplied by commands themselves.
-Which violates GOF Design pattern command pattern consequences: <i>"Command decouples the object that invokes the operation from the one that knows how to perform it." </i>
+While command objects are the one responsible for operations executions it's not a command pattern implementation because the invoker (CommandMediators) and the commands (e.g ClickButtonCommand) are tightly coupled. Click button command invocation from CommandMediators always corresponds to ClickButtonCommand execution and, moreover, requests invocation parameters are supplied by commands themselves.
+Which deviates from GOF Design pattern command pattern consequences: <i>"Command decouples the object that invokes the operation from the one that knows how to perform it." </i>
 
 ## Data structures
 
