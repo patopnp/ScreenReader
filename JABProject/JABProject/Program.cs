@@ -41,6 +41,8 @@ namespace JABProject
 
             int appIndex = voiceUI.promptAppChoice(javaApplications);
 
+            if (appIndex == -1) return;
+
             windowHandle = javaApplications[appIndex - 1].ProcessPtr;
 
             CommandsMediator mediator = new CommandsMediator(voiceUI);

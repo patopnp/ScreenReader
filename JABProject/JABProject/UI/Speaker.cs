@@ -12,7 +12,7 @@ namespace JABProject.UI
         SpeechSynthesizer synth;
 
         public const string noOptionsText = "No available actions to execute";
-        public const string promptPossibleActions = "Pick an actions from the followings:";
+        public const string promptPossibleActions = "Pick an action from the followings:";
         public const string unrecognizedCommand = "Please repeat";
         public const string noApp = "No running Java application found";
 

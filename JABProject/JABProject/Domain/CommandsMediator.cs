@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JABProject.UI;
+using JABProject.Domain.Commands;
 
 namespace JABProject
 {
@@ -59,6 +60,9 @@ namespace JABProject
             }
             else
             {
+                ExitCommand exitCmd = new ExitCommand();
+                voiceInputToCommand.Add(exitCmd.commandName(), exitCmd);
+                options.Add(exitCmd.commandName());
                 read(Speaker.promptPossibleActions);
             }
 

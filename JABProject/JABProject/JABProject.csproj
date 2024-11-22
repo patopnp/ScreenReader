@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Commands\ExitCommand.cs" />
     <Compile Include="UI\Speaker.cs" />
     <Compile Include="UI\VoiceUI.cs" />
     <Compile Include="Domain\CommandsMediator.cs" />
